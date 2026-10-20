@@ -1,0 +1,177 @@
+.mobile-menu {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    height: calc(100dvh - var(--nav-height));
+    background: var(--surface-canvas);
+    z-index: var(--z-mobile-menu);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s var(--transition-timing),
+                visibility 0.3s,
+                transform 0.3s var(--transition-timing);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-default) transparent;
+}
+
+.mobile-menu::-webkit-scrollbar {
+    width: 10px;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb {
+    background: var(--border-default);
+    border-radius: 8px;
+    border: 2px solid var(--surface-canvas);
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mobile-menu-content {
+    padding-block: var(--space-3);
+}
+
+.mobile-search-field {
+    margin-bottom: var(--space-4);
+    background: var(--surface-raised);
+}
+
+.mobile-accordion {
+    border-bottom: 1px solid var(--border-default);
+}
+
+.mobile-accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2) 0;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: var(--title-20);
+    line-height: var(--lh-title-20);
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: color var(--transition-base);
+    min-height: 48px;
+}
+
+.mobile-accordion-header:hover {
+    color: var(--action-primary);
+}
+
+.mobile-accordion-header .chevron {
+    width: 20px;
+    height: 20px;
+    color: var(--text-muted);
+    transition: transform 0.3s var(--transition-timing),
+                color 0.3s;
+}
+
+.mobile-accordion-header[aria-expanded="true"] .chevron {
+    transform: rotate(180deg);
+    color: var(--action-primary);
+}
+
+.mobile-accordion-content {
+    display: grid;
+    grid-template-rows: minmax(0, 0fr);
+    visibility: hidden;
+    transition: grid-template-rows 0.35s var(--transition-timing),
+                visibility 0s linear 0.35s;
+}
+
+.mobile-accordion-header[aria-expanded="true"] + .mobile-accordion-content {
+    grid-template-rows: minmax(0, 1fr);
+    visibility: visible;
+    transition: grid-template-rows 0.35s var(--transition-timing),
+                visibility 0s;
+}
+
+.mobile-accordion-inner {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.mobile-accordion-inner ul {
+    list-style: none;
+    padding-bottom: var(--space-2);
+}
+
+.mobile-accordion-inner li {
+    margin-bottom: var(--space-1);
+}
+
+.mobile-accordion-inner a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding-block: var(--space-half);
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+    font-size: var(--body-16);
+    line-height: var(--lh-body-16);
+    font-weight: 400;
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.mobile-accordion-inner a:hover {
+    color: var(--action-primary);
+}
+
+.mobile-search-suggestions {
+    margin: calc(-1 * var(--space-2)) 0 var(--space-4);
+}
+
+.mobile-search-suggestions h3 {
+    font-family: var(--font-mono);
+    font-size: var(--caption-12);
+    line-height: var(--lh-caption-12);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-subtitle);
+    margin-bottom: var(--space-2);
+}
+
+.mobile-search-suggestions ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-3);
+}
+
+.mobile-search-suggestions a {
+    color: var(--text-body);
+    font-size: var(--small-14);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color var(--transition-fast) var(--transition-timing);
+}
+
+.mobile-search-suggestions a:hover {
+    color: var(--action-primary);
+}
+
+.mobile-search-suggestions .search-no-results {
+    color: var(--text-muted);
+    font-size: var(--small-14);
+}
+
+.mobile-cta {
+    width: 100%;
+    margin-top: var(--space-4);
+    padding: var(--space-2);
+}

@@ -1,0 +1,33 @@
+/* Raw palette & base units */
+:root {
+    --polar-0: #eceff4;
+    --polar-1: #e5e9f0;
+    --polar-2: #d8dee9;
+    --polar-3: #c5cbd3;
+    --snow-0: #4c566a;
+    --snow-1: #3b4252;
+    --snow-2: #2e3440;
+    --frost-0: #3f7a78;
+    --frost-1: #1c647d;
+    --frost-2: #2c5178;
+    --frost-3: #2e436e;
+    --aurora-red: #a2333d;
+    --aurora-orange: #a04d2b;
+    --aurora-yellow: #8f6e00;
+    --aurora-green: #4f7e44;
+    --aurora-purple: #7a4d8a;
+
+    --space-half: 4px;
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-6: 48px;
+    --space-8: 64px;
+    --space-10: 80px;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-full: 9999px;
+}

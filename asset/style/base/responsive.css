@@ -1,0 +1,66 @@
+/* --- 14. RESPONSIVE BREAKPOINTS -------------------------------------- */
+@media (max-width: 768px) {
+    .desktop-nav,
+    .mega-menu-container,
+    .search-toggle,
+    .nav-cta {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    /* Improve touch targets */
+    .nav-link,
+    .icon-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none !important;
+    }
+
+    /* Optimize backdrop filters for desktop only */
+    .global-nav,
+    .mega-menu-container {
+        will-change: auto;
+    }
+}
+
+/* --- 15. ACCESSIBILITY (MOTION COMFORT) ------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        animation-delay: 0s !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+        scroll-behavior: auto !important;
+    }
+
+    .shimmer-text {
+        animation: none;
+        background: none;
+        -webkit-text-fill-color: var(--text-primary);
+        color: var(--text-primary);
+    }
+
+    .logo-cursor {
+        animation: none;
+        opacity: 1;
+    }
+
+    .badge-dot {
+        animation: none;
+    }
+}

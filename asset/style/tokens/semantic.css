@@ -1,0 +1,25 @@
+/* Functional aliases */
+:root {
+    --surface-canvas: var(--polar-0);
+    --surface-raised: var(--polar-1);
+    --surface-hover: var(--polar-2);
+    --border-default: var(--polar-3);
+    --text-primary: var(--snow-2);
+    --text-body: var(--snow-1);
+    --text-muted: var(--snow-0);
+    --accent-subtitle: var(--frost-0);
+    --action-primary: var(--frost-1);
+    --action-hover: var(--frost-2);
+    --action-active: var(--frost-3);
+    --focus-ring: var(--frost-2);
+    --on-action: #eceff4;
+    --status-error: var(--aurora-red);
+    --status-warning: var(--aurora-yellow);
+    --status-success: var(--aurora-green);
+    --status-special: var(--aurora-purple);
+
+    --nav-bg: rgba(236, 239, 244, 0.72);
+    --dropdown-bg: rgba(229, 233, 240, 0.85);
+    --curtain-bg: rgba(236, 239, 244, 0.45);
+    --dropdown-shadow: 0 20px 40px rgba(46, 52, 64, 0.14);
+}

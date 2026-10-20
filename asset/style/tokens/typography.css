@@ -1,0 +1,22 @@
+/* Fonts & Scale */
+:root {
+    --font-mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --font-sans: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    --caption-12: 0.75rem;
+    --lh-caption-12: 1.0625rem;
+    --small-14: 0.875rem;
+    --lh-small-14: 1.3125rem;
+    --body-16: 1rem;
+    --lh-body-16: 1.5625rem;
+    --title-20: 1.25rem;
+    --lh-title-20: 1.625rem;
+    --heading-24: 1.5rem;
+    --lh-heading-24: 1.875rem;
+    --heading-32: 2rem;
+    --lh-heading-32: 2.375rem;
+    --heading-48: 3rem;
+    --lh-heading-48: 3.3125rem;
+    --display-64: 4rem;
+    --lh-display-64: 4.1875rem;
+}

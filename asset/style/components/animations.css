@@ -1,0 +1,55 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mega-panel.is-active li,
+.mobile-accordion-inner.is-animating li {
+    animation: fadeInUp var(--transition-mega) var(--transition-timing) backwards;
+}
+
+.mega-panel.is-active li:nth-child(1),
+.mobile-accordion-inner.is-animating li:nth-child(1) {
+    animation-delay: calc(var(--stagger-base) * 1);
+}
+
+.mega-panel.is-active li:nth-child(2),
+.mobile-accordion-inner.is-animating li:nth-child(2) {
+    animation-delay: calc(var(--stagger-base) * 2);
+}
+
+.mega-panel.is-active li:nth-child(3),
+.mobile-accordion-inner.is-animating li:nth-child(3) {
+    animation-delay: calc(var(--stagger-base) * 3);
+}
+
+.mega-panel.is-active li:nth-child(4),
+.mobile-accordion-inner.is-animating li:nth-child(4) {
+    animation-delay: calc(var(--stagger-base) * 4);
+}
+
+.mega-panel.is-active li:nth-child(5),
+.mobile-accordion-inner.is-animating li:nth-child(5) {
+    animation-delay: calc(var(--stagger-base) * 5);
+}
+
+.mega-panel.is-active li:nth-child(6),
+.mobile-accordion-inner.is-animating li:nth-child(6) {
+    animation-delay: calc(var(--stagger-base) * 6);
+}
+
+.mega-panel.is-active li:nth-child(7),
+.mobile-accordion-inner.is-animating li:nth-child(7) {
+    animation-delay: calc(var(--stagger-base) * 7);
+}
+
+.mega-panel.is-active li:nth-child(8),
+.mobile-accordion-inner.is-animating li:nth-child(8) {
+    animation-delay: calc(var(--stagger-base) * 8);
+}

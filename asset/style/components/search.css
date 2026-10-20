@@ -1,0 +1,95 @@
+.search-container {
+    max-width: 40rem;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    background: var(--surface-canvas);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    padding: var(--space-half) var(--space-2);
+    transition: border-color var(--transition-base) var(--transition-timing),
+                box-shadow var(--transition-base) var(--transition-timing);
+}
+
+.search-field:focus-within {
+    border-color: var(--focus-ring);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--focus-ring) 22%, transparent);
+}
+
+.search-field[data-invalid="true"] {
+    border-color: var(--status-error);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--status-error) 18%, transparent);
+}
+
+.search-prompt {
+    font-family: var(--font-mono);
+    font-size: var(--body-16);
+    font-weight: 600;
+    color: var(--action-primary);
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: var(--space-1) 0;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-size: max(1rem, 16px);
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.search-helper {
+    font-family: var(--font-mono);
+    font-size: var(--caption-12);
+    line-height: var(--lh-caption-12);
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-top: var(--space-1);
+}
+
+.search-suggestions {
+    margin-top: var(--space-3);
+}
+
+.search-suggestions h3 {
+    font-family: var(--font-mono);
+    font-size: var(--caption-12);
+    line-height: var(--lh-caption-12);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-subtitle);
+    margin-bottom: var(--space-2);
+}
+
+.search-suggestions ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-3);
+}
+
+.search-suggestions a {
+    font-family: var(--font-sans);
+    font-size: var(--small-14);
+    font-weight: 500;
+    color: var(--text-body);
+    text-decoration: none;
+    transition: color var(--transition-fast) var(--transition-timing);
+}
+
+.search-suggestions a:hover {
+    color: var(--action-primary);
+}

@@ -1,0 +1,123 @@
+.mega-menu-container {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: var(--dropdown-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--dropdown-shadow);
+    border-bottom: 1px solid var(--border-default);
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: height var(--transition-slow) var(--transition-timing),
+                opacity var(--transition-slow) var(--transition-timing),
+                visibility var(--transition-slow) var(--transition-timing);
+}
+
+.global-nav.is-open .mega-menu-container {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mega-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: var(--space-4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-base) var(--transition-timing),
+                visibility 0s linear var(--transition-slow);
+}
+
+.mega-panel.is-active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--transition-base) var(--transition-timing) 0.05s,
+                visibility 0s;
+}
+
+.menu-curtain {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-curtain);
+    background: var(--curtain-bg);
+    backdrop-filter: blur(14px) saturate(120%);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transition-slow) var(--transition-timing),
+                visibility var(--transition-slow) var(--transition-timing);
+}
+
+.menu-curtain.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* --- 10. PANEL CONTENT ----------------------------------------------- */
+.panel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+}
+
+.cols-2 {
+    --panel-cols: 2;
+}
+
+.cols-3 {
+    --panel-cols: 3;
+}
+
+@media (min-width: 1024px) {
+    .panel-grid {
+        grid-template-columns: repeat(var(--panel-cols, 3), minmax(0, 1fr));
+        gap: var(--space-4);
+    }
+}
+
+.panel-column h3 {
+    font-family: var(--font-mono);
+    font-size: var(--caption-12);
+    line-height: var(--lh-caption-12);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-subtitle);
+    margin-bottom: var(--space-2);
+}
+
+.panel-column ul {
+    list-style: none;
+}
+
+.panel-column li {
+    margin-bottom: var(--space-1);
+}
+
+.panel-column a {
+    font-family: var(--font-sans);
+    font-size: var(--small-14);
+    line-height: var(--lh-small-14);
+    font-weight: 500;
+    color: var(--text-body);
+    text-decoration: none;
+    display: inline-block;
+    transition: color var(--transition-fast) var(--transition-timing);
+}
+
+.panel-column a:hover {
+    color: var(--action-primary);
+}
+
+.panel-column a:active {
+    color: var(--action-hover);
+}

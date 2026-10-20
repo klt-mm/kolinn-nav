@@ -1,0 +1,30 @@
+.btn {
+    font-family: var(--font-mono);
+    font-size: var(--small-14);
+    font-weight: 600;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--transition-base) var(--transition-timing),
+                border-color var(--transition-base) var(--transition-timing),
+                color var(--transition-base) var(--transition-timing);
+}
+
+.btn-primary {
+    background-color: var(--action-primary);
+    color: var(--on-action);
+    padding: 11px var(--space-2);
+}
+
+.btn-primary:hover {
+    background-color: var(--action-hover);
+}
+
+.btn-primary:active {
+    background-color: var(--action-active);
+}
